@@ -1,6 +1,9 @@
 // TODO: Include packages needed for this application
 var inquirer = require("inquirer");
 var generateMarkdown = require("./utils/generateMarkdown")
+var fs = require("fs");
+var util = require("util");
+var writeFileAsync = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
 var questions = [
