@@ -70,7 +70,7 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init()  {
+async function init()  {
     var input = await promptQuestions();
     var content = generateMarkdown(input);
     await writeToFile("./README.md", content);
