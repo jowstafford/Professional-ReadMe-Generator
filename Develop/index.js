@@ -1,8 +1,9 @@
 // TODO: Include packages needed for this application
-const inquirer = require("inquirer");
+var inquirer = require("inquirer");
+var generateMarkdown = require("./utils/generateMarkdown")
 
 // TODO: Create an array of questions for user input
-const questions = [
+var questions = [
     {
         type: 'input',
         message: 'Please enter your github username',
@@ -62,7 +63,11 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    var content = generateMarkdown(data);
+    await writeToFile("./README.md", content);
+    console.log("README.md has been generated");
+}
 
 // Function call to initialize app
 init();
