@@ -12,8 +12,35 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-`;
+  return `# ${data.projectTitle}
+
+## Table of Contents
+* [Project Creator](#projectUsername)
+* [Project Description](#projectDescription)
+* [Project Installation](#projectInstallation)
+* [Project Usage](#projectUsage)
+* [Project Collaborators](#projectCollaborators)
+* [Project License](#projectLicense)
+
+## Creaded by ${data.projectUsername}
+(https://github.com/${data.projectUsername})
+
+## Project Description
+${data.projectDescription}
+
+## Project Installation
+${data.projectInstallation}
+
+## Project Usage
+${data.projectUsage}
+
+## Project Collaborators
+${data.projectCollaborators}
+
+## License
+Repository possesses the ${data.projectLicense} license.
+
+  `;
 }
 
 module.exports = generateMarkdown;
