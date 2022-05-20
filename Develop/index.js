@@ -57,6 +57,10 @@ var questions = [
 
 ];
 
+var promptQuestions = () => {
+    return inquirer.prompt(questions);
+}
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return writeFileAsync(fileName, data);
@@ -64,8 +68,9 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    var content = generateMarkdown(data);
-    await writeToFile("./README.md", content);
+    const input = promptQuestions();
+    var content = generateMarkdown(input);
+    writeToFile("./README.md", content);
     console.log("README.md has been generated");
 }
 
