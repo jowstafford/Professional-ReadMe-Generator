@@ -22,7 +22,7 @@ function generateMarkdown(data) {
 * [Project Collaborators](#projectCollaborators)
 * [Project License](#projectLicense)
 
-## Creaded by ${data.projectUsername}
+## Created by ${data.projectUsername}
 (https://github.com/${data.projectUsername})
 
 ## Project Description
