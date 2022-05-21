@@ -42,6 +42,7 @@ var questions = [
         message: "Please enter the license your project possesses",
         name: 'projectLicense',
         choices: [
+            'None',
             'Apache License 2.0',
             'GNU General Public License v3.0',
             'MIT License',
